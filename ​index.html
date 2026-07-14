@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>☠️ SHIXTER - SYSTEM OVERRIDE ☠️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #050505;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        
+        /* تساقط قطرات الدم والجماجم والعناكب */
+        .horror-particle {
+            font-size: 1.4em;
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            pointer-events: none;
+            animation-name: fall, shake;
+            animation-duration: 8s, 2.5s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8));
+        }
+        @keyframes fall {
+            0% { top: -10%; }
+            100% { top: 100%; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(15px); }
+        }
+
+        /* توهج أحمر شيطاني */
+        .neon-glow-red {
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+        }
+        
+        /* تأثير اهتزاز النص (Glitch) */
+        .glitch-text {
+            text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #550000;
+            animation: glitch 1.5s infinite;
+        }
+        @keyframes glitch {
+            0%, 100% { text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #500000; }
+            50% { text-shadow: -2px 2px 0px #ff0000, 2px -2px 0px #500000; }
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- الجزيئات المتساقطة المرعبة -->
+    <div class="horror-particle" style="left: 8%; animation-delay: 0s, 0s;">🩸</div>
+    <div class="horror-particle" style="left: 23%; animation-delay: 2.5s, 1s;">💀</div>
+    <div class="horror-particle" style="left: 44%; animation-delay: 1.2s, 1.8s;">🕷️</div>
+    <div class="horror-particle" style="left: 62%; animation-delay: 4.5s, 0.5s;">☠️</div>
+    <div class="horror-particle" style="left: 81%; animation-delay: 3s, 1.2s;">🩸</div>
+    <div class="horror-particle" style="left: 93%; animation-delay: 1.8s, 2s;">💀</div>
+
+    <!-- الكرت الرئيسي -->
+    <div class="w-full max-w-md bg-[#0b0b0b] border-2 border-red-950 rounded-[2.5rem] p-6 shadow-[0_0_35px_rgba(255,0,0,0.25)] relative overflow-hidden">
+        
+        <!-- الهيدر -->
+        <div class="flex justify-between items-center mb-6">
+            <div class="text-right">
+                <h1 class="text-3xl font-black text-red-600 tracking-widest glitch-text">شيكستر</h1>
+                <h2 class="text-xs font-bold text-gray-500 tracking-wider">☠️ OVERRIDE PRO ☠️</h2>
+            </div>
+            <div class="flex items-center gap-1.5 bg-[#170404] border border-red-900/60 px-3 py-1.5 rounded-full text-xs font-semibold text-red-500">
+                ☣️ <span>DANGER +18</span>
+            </div>
+        </div>
+
+        <!-- المدخلات -->
+        <div class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold text-red-500/80 mb-1.5 uppercase tracking-widest">🩸 بريد الدعم</label>
+                <input type="text" id="email" value="stopCA@telegram.org" 
+                       class="w-full bg-[#111111] border border-red-950/60 rounded-2xl px-4 py-3 text-red-500 focus:outline-none focus:border-red-600 text-left font-mono" dir="ltr">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-red-500/80 mb-1.5 uppercase tracking-widest">☠️ الموضوع</label>
+                <input type="text" id="subject" value="Illegal child abuse group +12" 
+                       class="w-full bg-[#111111] border border-red-950/60 rounded-2xl px-4 py-3 text-red-500 focus:outline-none focus:border-red-600 text-left" dir="ltr">
+            </div>
+
+            <div>
+                <label class="block text-xs font-bold text-red-500/80 mb-1.5 uppercase tracking-widest">⛓️ نص البلاغ المراد تصديره</label>
+                <textarea id="report_text" rows="5" 
+                          class="w-full bg-[#111111] border border-red-950/60 rounded-2xl px-4 py-3 text-red-500 focus:outline-none focus:border-red-600 text-left font-mono text-xs leading-relaxed" dir="ltr">Child Abuse Links:
+https://t.me/c/3926596333/6441
+https://t.me/c/3926596333/6441</textarea>
+            </div>
+        </div>
+
+        <!-- الأزرار الرئيسية -->
+        <div class="mt-6 space-y-3">
+            <button onclick="sendReport()" 
+                    class="w-full bg-gradient-to-r from-red-700 to-red-600 hover:from-red-600 hover:to-red-500 text-black font-extrabold py-4 rounded-2xl shadow-[0_0_20px_rgba(220,38,38,0.5)] transition transform active:scale-95 text-lg flex items-center justify-center gap-2">
+                ☠️ <span>شن الهجوم البريدي</span> ☠️
+            </button>
+
+            <button onclick="vibrateDevice(50)" class="w-full bg-gradient-to-r from-[#170404] to-[#250808] border border-red-900 text-red-500 font-bold py-3.5 rounded-2xl transition transform active:scale-95 flex items-center justify-center gap-2">
+                ⚡ <span>قائمة الإضافات السرية</span> ⚡
+            </button>
+        </div>
+
+        <!-- أزرار التحكم والعداد السفلي -->
+        <div class="mt-6 pt-5 border-t border-red-950/60">
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <button onclick="useLastText()" class="bg-[#111111] border border-red-950/60 text-red-500/80 font-bold py-2.5 px-4 rounded-xl text-xs transform active:scale-95 transition">
+                    🔄 آخر نص مدمر
+                </button>
+                <button onclick="resetCounter()" class="bg-[#111111] border border-red-950/60 text-red-500/80 font-bold py-2.5 px-4 rounded-xl text-xs transform active:scale-95 transition">
+                    ⚠️ تصفير العداد
+                </button>
+            </div>
+
+            <div class="flex justify-between items-center bg-[#050505] border border-red-950 rounded-2xl p-3">
+                <span class="text-gray-500 text-sm font-semibold">💀 إجمالي الضربات المرسلة</span>
+                <span id="counter" class="bg-red-700 text-black font-black px-4 py-1.5 rounded-full text-base min-w-[60px] text-center shadow-[0_0_15px_rgba(255,0,0,0.7)] tracking-widest">1000</span>
+            </div>
+        </div>
+
+        <!-- الفوتر ورابط التليجرام الخاص بك -->
+        <div class="mt-6 flex justify-between items-center text-xs border-t border-red-950/40 pt-4">
+            <a href="https://t.me/s9p_p" target="_blank" onclick="vibrateDevice(100)" class="text-red-600 hover:text-red-400 font-black transition flex items-center gap-1 hover:scale-105 duration-200 glitch-text">
+                🩸 التواصل مع شيكستر
+            </a>
+            <span class="text-gray-600 font-bold">☠️ SHIXTER SYSTEM ☠️</span>
+        </div>
+
+    </div>
+
+    <script>
+        // دالة الاهتزاز لهواتف الأندرويد
+        function vibrateDevice(ms) {
+            if (navigator.vibrate) {
+                navigator.vibrate(ms);
+            }
+        }
+
+        // قراءة العداد والنص من ذاكرة المتصفح المحلية لكي لا يضيع التقدّم
+        let counter = localStorage.getItem('shixter_counter') ? parseInt(localStorage.getItem('shixter_counter')) : 1000;
+        let lastText = localStorage.getItem('shixter_last_text') || "";
+
+        document.getElementById('counter').innerText = counter;
+
+        function sendReport() {
+            vibrateDevice(80);
+            
+            counter++;
+            document.getElementById('counter').innerText = counter;
+            localStorage.setItem('shixter_counter', counter);
+
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const text = document.getElementById('report_text').value;
+
+            localStorage.setItem('shixter_last_text', text);
+            lastText = text;
+
+            // فتح الجيميل مباشرة مع تعبئة البيانات
+            const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+            window.location.href = mailtoUrl;
+        }
+
+        function resetCounter() {
+            vibrateDevice(150);
+            counter = 0;
+            document.getElementById('counter').innerText = counter;
+            localStorage.setItem('shixter_counter', counter);
+        }
+
+        function useLastText() {
+            vibrateDevice(45);
+            if(lastText) {
+                document.getElementById('report_text').value = lastText;
+            } else {
+                alert("لا يوجد نص مدمر محفوظ مسبقاً!");
+            }
+        }
+    </script>
+</body>
+</html>
